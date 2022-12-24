@@ -1,0 +1,226 @@
+body{
+   
+    font-family: poppins;
+}
+.wishlist-wrap{
+    width: 80%;
+    margin: auto;
+}
+.wishlist-table{
+    width: 100%;
+    margin: auto;
+    
+}
+.wishlist-product-img{
+    height: 50px;
+    width: 50px;
+}
+.wishlist-product-cell{
+    width: 10%;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    padding: 25px;
+    padding-left: 15px;
+    text-align: left;
+    border: 1px solid rgb(156, 156, 156);
+}
+th{
+    padding: 15px;
+    padding-left: 15px;
+    text-align: left;
+    border: 1px solid rgb(156, 156, 156);  
+}
+.wishlist-add-to-cart{
+    color: azure;
+    background-color: #ee403d;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 12px;
+    border: 0;
+}
+.wishlist-add-to-cart:hover{
+    background-color:#f07472;
+}
+.default-wishlist{
+    font-weight: 600;
+    font-size: 30px;
+}
+.wishlist-icon-class{
+    height: 25px;
+    padding: 10px;
+}
+.icon-main-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.clipbord{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    line-height: 0.5;
+}
+
+.clipbord-h5{
+    font-weight: 600;
+    font-size: 1.125rem;;
+}
+.clipbord-p{
+    font-size:15px;
+}
+.newsletter-main-div{
+    background-color: rgb(251, 250, 247);
+}
+.newsletter-2{
+    margin:auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 120px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .newsletter-2{
+    margin:auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 120px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .newsletter-h1{
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .email-address{
+    font-size: 16px;
+    color: #bbb;
+    outline: none;
+    border: none;
+    width: 90%;
+    background-color:rgb(251, 250, 247) ;
+  }
+  .privacy-div{
+    display: flex;
+    align-items: center;
+  }
+  .privacy-link{
+    font-size: .8125rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.privacy-link:hover{
+    color: #eb7700;
+}
+.shopping-app{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+.shopping-app-img{
+    display: flex;
+    align-items: center;
+}
+.app-store{
+    height: 40px;
+}
+.shopping-timing{
+    font-size: .9375rem;
+}
+.shopping-app-p{
+    font-size: 14px;
+    margin-left: 20px;
+}
+.by-subscribing-p{
+    color: #bbb;
+    font-size: .8125rem;
+}
+.newsletter-p{
+    color: #eb7700;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.email-address-hr{
+    background-color: black;
+    height: 2px;
+}
+.newsletter-p3{
+    color: #bbb;
+    font-size: .8325rem;
+}
+.rohit{
+    font-size:50px;
+}
+.select-action{
+    padding: 10px;
+    width: 30%;
+}
+.apply-action-btn{
+    padding: 10px 25px; 
+    margin: 15px;
+    color: white;
+    background-color: #ee403d;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.apply-action-btn:hover{
+        background-color: #f07472;
+}
+.apply-action-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-select-button{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.budhi{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.add-all-to-cart{
+    color: white;
+    background-color: #ee403d;
+    border: none;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+.add-all-to-cart:hover{
+    background-color: #f07472;
+}
+.add-all-to-cart2{
+    color: white;
+    background-color: #ee403d;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+.add-all-to-cart2:hover{
+    background-color:  #f07472;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 900,
+        'GRAD' 0,
+        'opsz' 68,
+}

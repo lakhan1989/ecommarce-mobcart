@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Thanks{% endblock %}
+{% block body %}
+
+
+    {% block css %}  
+    <link rel="stylesheet" href="{% static 'thanks.css' %}" /> 
+    {% endblock %}
+ 
+    <div class="thanks-main-div">
+        <div class="thanks-content">
+             <p class="mail-icon-para"> <span class="material-symbols-outlined"><span class="mail-icon"> mail</span></span> </p>
+             <p class="thanks-for-submitting">Thanks for submitting!</p>
+             <p class="massage-sent">Your massage has been sent!</p>
+             <div class="massage-and-btn-center"> <a href="{% url 'home' %}"><button class="go-home-btn">Go Home</button> </a></div>
+        </div>
+    </div>
+ 
+{% endblock %}

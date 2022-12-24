@@ -1,0 +1,158 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Product-page{% endblock %}
+{% block body %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'layout.css' %}">
+<link rel="stylesheet" href="{% static 'product_list.css' %}" />
+<link rel="stylesheet" href="{% static 'product_page.css' %}">
+{% endblock %}
+
+<div>
+    <div class="main">
+        <div>
+            <img class="pants-1" src="{{ items.image.url }}" alt="">
+        </div>
+        <div>
+
+            <h1 class="product_title">{{items.product_name}} </h1>
+            <p class="product-descreption"> <b>{{items.product_description}}</b>
+            </p>
+            <div class="flex-rating">
+                <span class="material-symbols-outlined rating">
+                    star star star star star
+                </span>
+
+
+                <p class="star-review">{{ items.rating }}</p>
+            </div>
+            <p> <span class="linethrow"> $25.90 </span> <b>{{items.price}}</b> </p>
+
+            <b>
+                <p>Color : {{items.color}}</p>
+            </b>
+            <div class="flex mobile-storage-div">
+                <div class="mobile-size">
+                    <p>32 GB</p>
+                </div>
+                <div class="mobile-size">
+                    <p>{{items.storage}}</p>
+                </div>
+                <div class="mobile-size">
+                    <p>128 Gb</p>
+                </div>
+                <div class="mobile-size">
+                    <p>256 Gb</p>
+                </div>
+                <div class="mobile-size">
+                    <p>512 Gb</p>
+                </div>
+            </div>
+            <div>
+                <div class="flex">
+                    <div class="flex-add-remove">
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                        <p>1</p>
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </div>
+                    <div  style="width: 100%;">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <label for="hidden"></label>
+                            <input type="hidden" name="product" value="{{ items.id }}" id="">
+
+                            <button type="submit" class="add-to-cart">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor-list">
+                <div class="icon-p">
+                    <span class="material-symbols-outlined icon">
+                        bolt
+                    </span>
+                    <a class="size-anchor" href="">Size Guide</a>
+                </div>
+                <div class="icon-p">
+                    <span class="material-symbols-outlined icon">
+                        favorite
+                    </span>
+                    <a class="size-anchor" href="">Add to Wishlist</a>
+                </div>
+                <div class="icon-p">
+                    <span class="material-symbols-outlined icon">
+                        ios_share
+                    </span>
+                    <a class="size-anchor" href="">Share this Product</a>
+                </div>
+            </div>
+            <hr>
+            <p> <span class="tags-p">Display:</span> <b>{{items.display_size}}</b></p>
+            <p> <span class="tags-p">Battery:</span> <b> {{items.battery}} </b> </p>
+            <p> <span class="tags-p">Camera:</span> <b> {{items.camera}} </b></p>
+            <p> <span class="tags-p">Ram:</span> <b> {{items.ram}} </b></p>
+        </div>
+        </div'>
+    </div>
+
+    <div>
+        <div class="budhi">
+            <div class="Description-main-div">
+                <h3 class="Description-hedding">Description</h3>
+                <h3 class="Description-hedding">Additional information</h3>
+                <h3 class="Description-hedding">Reviews (2)</h3>
+            </div>
+            <hr>
+            <div>
+                <p class="Description-p">Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae
+                    magna in
+                    dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula.
+                    Fusce
+                    fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque
+                    lorem
+                    mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan
+                    tincidunt.
+                    Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
+                <p class="Description-p">Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend
+                    nunc
+                    a, lobortis neque. Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit
+                    amet,
+                    maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus
+                    ipsum.
+                    Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra
+                    dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam,
+                    sit
+                    amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="recent-view-grid-main">
+        <h3>Recently Viewed Products</h3>
+        <hr>
+        <div class="recent-view-grid-main2">
+            {% for recent in recent_item %}
+            <div> 
+                <a href="{% url 'product_page' recent.id %}"><img class="recent-product-img" src="{{ recent.image.url }}" alt=""></a>
+                 
+                <div class="img-div">
+                    <span class="material-symbols-outlined rating p"> star </span>
+                    <p class="p bold">{{ recent.rating }}</p>
+                </div>
+                <a class="item-name" href="{% url 'product_page' recent.id %}"><p>{{ recent.product_name }}</p></a>
+                <p><span class="strike"> $69.48 </span>{{ recent.price }}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+    {% endblock %}

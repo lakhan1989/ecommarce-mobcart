@@ -1,0 +1,128 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} Order-History {% endblock %}
+{% block body %}
+ 
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'order_history.css'%}">
+    {% endblock %}
+
+    <div class="wishlist-wrap">
+        <p class="default-wishlist">Default wishlist</p>
+        <table class="wishlist-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" /></th>
+                    
+                    <th>Order ID</th>
+                    <th>Products</th>
+                    <th>Unit Price</th>
+                    <th>Date Added</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for history in orders %}
+                <tr>
+                    <td><input type="checkbox" /></td>
+                   
+                    <td>{{ history.id }}</td>
+                    <td>
+                    {% for x in history.products.all %}
+                            <li>{{ x.product_name }}</li>
+                            {% endfor %}
+                        </td>
+                        <td>{{ history.created_at }}</td>
+                    
+                    <td>
+                        <span class="material-symbols-outlined"> done_all </span> In Stock
+                    </td>
+                     
+                </tr>
+                {% endfor %}
+                 
+            </tbody>
+        </table>
+
+        <div class="apply-action-div">
+            <div class="budhi">
+            <select class="select-action" name="cars" id="cars">
+                <option value="volvo">Action</option>
+                <option value="saab">Add to card</option>
+            </select>
+            <div>
+                <button class="apply-action-btn">Apply action</button>
+            </div>
+        </div>
+            <div class="add-select-button">
+                <button  class="add-all-to-cart">Add select to cart</button>
+                <div>
+                    <button class="add-all-to-cart2">Add all to cart</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="icon-main-div">
+            <p>Share on</p>
+            <div>
+                <img class="wishlist-icon-class" src="./photos/icons8-facebook-50.png" alt="" />
+                <img class="wishlist-icon-class" src="./photos/icons8-twitter-30.png" alt="" />
+                <img class="wishlist-icon-class" src="./photos/icons8-pinterest-24.png" alt="" />
+                <img class="wishlist-icon-class" src="./photos/icons8-whatsapp-30.png" alt="" />
+                <img class="wishlist-icon-class" src="./photos/icons8-clipboard-50.png" alt="" />
+                <img class="wishlist-icon-class" src="./photos/icons8-secured-letter-50.png" alt="" />
+            </div>
+        </div>
+        <div class="clipbord">
+            <span class="material-symbols-outlined"> <span class="rohit">local_shipping</span> </span>
+            <div>
+                <h5 class="clipbord-h5">Free Shipping Orders $60+</h5>
+                <p class="clipbord-p">A delivery service you can depend on</p>
+            </div>
+            <span class="material-symbols-outlined"><span class="rohit">support_agent</span> </span>
+            <div>
+                <h5 class="clipbord-h5">Customer Support</h5>
+                <p class="clipbord-p">Satisfied customers are our best ads</p>
+            </div>
+            <span class="material-symbols-outlined"><span class="rohit">credit_card</span> </span>
+            <div>
+                <h5 class="clipbord-h5">100% Secure Payments</h5>
+                <p class="clipbord-p">The highest level of security</p>
+            </div>
+        </div>
+   </div>
+ <div class="newsletter-main-div">
+        <div class="newsletter-2">
+            <div>
+                <p class="newsletter-p">Join our newsletter for £10 off</p>
+                <h1 class="newsletter-h1">Get our emails for info on new items,
+                    sales and more.</h1>
+                <p class="newsletter-p3">We'll email you a voucher worth £10 off your first order over £50.</p>
+            </div>
+            <div>
+                <input class="email-address" type="text" placeholder="Enter your email address">
+                <span class="material-symbols-outlined">
+                    trending_flat
+                </span>
+                <hr class="email-address-hr">
+                <div class="privacy-div">
+                    <p class="by-subscribing-p">By subscribing you agree to our</p>
+                    <a class="privacy-link" href="">Terms & Conditions and Privacy & Cookies Policy.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="shopping-app">
+        <p class="shopping-timing"><strong>Hours:</strong>9.30am-6.30pm Monday to Friday</p>
+        <div class="shopping-app-img">
+            <img class="app-store" src="./photos/app-store.png logo.png" alt="">
+            <p class="shopping-app-p"><strong>Shopping App:</strong> Try our View in Your Room feature, manage
+                registries and save payment info.</p>
+        </div>
+    </div>
+ 
+
+{% endblock %}

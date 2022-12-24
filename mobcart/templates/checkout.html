@@ -1,0 +1,163 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} Checkout {% endblock %}
+{% block body %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'checkout.css'%}">
+{% endblock %}
+
+  <div class="top-first-icon">
+    <span class="material-symbols-outlined top-icon">
+      bookmark
+    </span>
+    <p class="top-para">Have a coupon? Click here to enter your code</p>
+  </div>
+  <div class="checkout-main-div">
+    <form method="POST">
+    <div class="checkout-form-main">
+      <div>
+        {% csrf_token %}
+        <h4 class="Billing-details-head">Billing details</h4>
+        <div>
+          <p class="form-all-para">First name*</p>
+          <input class="checkout-input" type="text" required name="first_name">
+        </div>
+        <div>
+          <p class="form-all-para">Last name*</p>
+          <input class="checkout-input" type="text" name="last_name">
+        </div>
+        <div>
+          <p class="form-all-para">Company name (optional)*</p>
+          <input class="checkout-input" type="text" name="company_name">
+        </div>
+        <div>
+          <p class="form-all-para">Country / Region *</p>
+
+
+          <select class="checkout-input" style="width: 93%" name="country" id="">
+            <option value="india">India</option>
+            <option value="usa">Usa</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="mexico">Mexico</option>
+            <option value="spain">Spain</option>
+          </select>
+        </div>
+        <div>
+          <p class="form-all-para">Street address *</p>
+          <input class="checkout-input" type="text" placeholder="House number and street name" name="address_line_1">
+        </div>
+        <div>
+          <p class="form-all-para">Town / City *</p>
+          <input class="checkout-input" type="text" name="city">
+        </div>
+        <div>
+          <p class="form-all-para">State* </p>
+          <input class="checkout-input" type="text" placeholder="Alaska" name="state">
+        </div>
+        <div>
+          <p class="form-all-para">ZIP Code *</p>
+          <input class="checkout-input" type="text" name="zip_code">
+        </div>
+        <div>
+          <p class="form-all-para">Phone *</p>
+          <input class="checkout-input" type="text" name="phone_number">
+        </div>
+        <div>
+          <p class="form-all-para">Email address *</p>
+          <input class="checkout-input" type="email" placeholder="Enter your email address" name="email">
+        </div>
+        <p><input type="checkbox" id="creat"><span> <label for="creat"><span class="check-box1"> Creat an
+                account</span></label> </span> </p>
+        <input type="checkbox" id="ship"> <label for="ship"><span class="check-box1">Ship to a different address?</span>
+        </label>
+        <p class="check-box1">Order notes (optional)</p>
+        <textarea class="text-area" name="notes" id="notes" cols="103" rows="10"
+          placeholder="Notes about your order,e.g spacial notes for delivery"></textarea>
+        </div>
+    
+      <div class="checkout-main-div2">
+        <div class="checkout-main-div3">
+          <h4>Your order</h4>
+          <div class="product">
+            <h5>Product</h5>
+            <h5>Subtotal</h5>
+          </div>
+          <hr>
+          <div class="faux-leather">
+            <h5 class="para-all">Price <br></h5>
+            <p>$49.90</p>
+          </div>
+          <div class="daisy-jacquard">
+            <h5 class="para-all"> Delivery Charge <br></h5>
+            <p>$29.99</p>
+          </div>
+          <hr>
+          <div class="subtotal">
+            <h5>Subtotal</h5>
+            <p>$79.89</p>
+          </div>
+          <hr>
+          <div class="shipping">
+            <h5>Shipping</h5>
+            <div>
+              <label for="flat">
+                <p><span class="para-all"> Flat rate:</span> <span class="doller">$15.00</span> <input type="radio"
+                    name="flat" id="flat"> </p>
+              </label>
+
+              <label for="local">
+                <p> <span class="para-all"> Local pickup </span><input type="radio" name="flat" id="local"></p>
+              </label>
+            </div>
+          </div>
+          <hr>
+          <div class="total">
+            <h5>Total</h5>
+            <h3>$94.89</h3>
+          </div>
+          <hr>
+          <div>
+             
+            <div> 
+              <input type="radio" value="upi" name="payment_method" id="bank" >
+              <label for="bank" class="direct-bank-transfer">UPI</label>
+            </div> 
+            
+            <div> 
+              <input type="radio" value="gpay" name="payment_method" id="gpay" >
+              <label for="gpay" class="direct-bank-transfer">Google Pay</label>
+            </div>
+            <div> 
+              <input type="radio" value="phonepay" name="payment_method" id="phonepay">
+              <label for="phonepay"  class="direct-bank-transfer">Phone Pay</label>
+            </div>
+            <div> 
+              <input type="radio" value="paytm" name="payment_method" id="paytm">
+              <label for="paytm"  class="direct-bank-transfer">Paytm</label>
+            </div>
+            <p class="para-all"> Make your payment directly into our bank account. Please use your Order ID as the
+              payment reference. Your order will not be shipped until the funds have cleared in our account </p>
+             
+            <p> <input type="radio" id="cash" name="payment">
+              <label for="cash"> <span class="direct-bank-transfer">Cash on delivery</span> </label>
+            </p>
+            <p class="para-all">Your personal data will be used to process your order, support your experience
+              throughout this website, and for other purposes described in our <a class="privacy-policy" href="">privacy
+                policy</a>.</p>
+            <p> <input type="checkbox" id="ihave"> <label for="ihave"><span class="i-have"> I have read and agree to the
+                  website </span> </label><a class="term-and-condiation" href=""> terms and conditions </a></p>
+            <button type="submit" class="place-order-btn">Place order</button> 
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+
+  </div>
+  
+
+{% endblock %}
+ 

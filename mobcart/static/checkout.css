@@ -1,0 +1,104 @@
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+.checkout-main-div{
+    margin: 10px;
+}
+.top-first-icon{
+    display: flex;
+    align-items: center;
+    background-color: #F7F7F7;
+    margin: 8px;
+}
+.top-icon{
+    color: #ff6900;
+    font-size: 18px;
+}
+.top-para{
+    font-size: 13px;
+}
+.Billing-details-head{
+    font-weight: 600;
+}
+.checkout-form-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.checkout-input{
+    width: 90%;
+    padding: 13px;
+    outline: none;
+    border: 1px solid rgb(203, 201, 201);
+}
+.form-all-para{
+    font-size: 13px;
+}
+.text-area{
+    outline: none;
+    border: 1px solid rgb(203, 201, 201);
+}
+.check-box1{
+    font-size:13px;
+}
+.product{
+    display: flex;
+    justify-content: space-between;
+}
+.faux-leather , .subtotal ,.shipping ,.total{
+    display: flex;
+    justify-content: space-between;
+}
+.daisy-jacquard{
+    display: flex;
+    justify-content: space-between;
+}
+.para-all{
+    font-size: 12px;
+}
+.doller{
+    font-size: 15px;
+}
+.direct-bank-transfer{
+    font-size: 13px;
+    font-weight: 1000;
+}
+.privacy-policy{
+    color: #cf2e2e;
+    font-weight: 900;
+    font-size: 11px;
+}
+.i-have{
+    font-size: 12px;
+    color: black;
+}
+.term-and-condiation{
+    color: #cf2e2e;
+    font-weight: 900;
+    font-size: 11px;
+}
+.place-order-btn{
+    background-color:#cf2e2e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 20px 0px;
+}
+.place-order-btn:hover{
+    background-color: #846565f8;
+}
+.checkout-main-div2{
+    border:  1px solid rgb(203, 201, 201);
+    box-shadow: 5px 6px rgb(246, 245, 245);
+    height: 1000px;
+}
+.checkout-main-div3{
+    margin: 30px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+  }

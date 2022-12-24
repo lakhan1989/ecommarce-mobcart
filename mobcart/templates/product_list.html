@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Product-list{% endblock %}
+{% block body %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'layout.css' %}">
+<link rel="stylesheet" href="{% static 'product_list.css' %}" />
+{% endblock %}
+
+
+<div class="mobcart-main-div">
+
+  <div class="benner-wrape-div">
+    <div class="benner-img">
+      <img class="benner-img-absolute" src="{% static 'photos/banner-26.jpg' %}" alt="" />
+      <div class="content">
+        <h2 class="benner-h">Plus-Size Style for Every Season</h2>
+        <p class="benner-p">
+          Quis ipsum suspendisse ultricess grevida.Risus <br />
+          commodo
+        </p>
+      </div>
+    </div>
+    <div class="main-grid-div1">
+      {% for x in products %}
+      <div>
+        {% if x.image %}
+        <a href="{% url 'product_page' x.id %}"><img class="five-img" src="{{ x.image.url }}" alt="" /></a>
+        {% endif %}
+        <div class="img-div">
+          <span class="material-symbols-outlined rating p"> star </span>
+          <p class="p-bold">{{ x.rating }}</p>
+        </div>
+        <a class="item-name" href="{% url 'product_page' x.id %}">
+          <p class="check-overshirt-p p ">{{ x.product_name}}</p>
+        </a>
+        <p class="para"><span class="strike">{{ x.price }}</span> {{ x.battery }}</p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+<div class="recent-view-grid-main">
+  <h3>Recently Viewed Products</h3>
+  <hr>
+  <div class="recent-view-grid-main2">
+
+    {% for recent in recent_item %}
+    <div>
+      <a href="{% url 'product_page' recent.id %}"><img class="recent-product-img" src="{{ recent.image.url }}" alt=""></a>
+
+      <div class="img-div">
+        <span class="material-symbols-outlined rating p"> star </span>
+        <p class="p bold">{{ recent.rating }}</p>
+      </div>
+      <a class="item-name" href="{% url 'product_page' recent.id %}"><p>{{ recent.product_name }}</p></a>
+      <p><span class="strike"> $69.48 </span>{{ recent.price }}</p>
+    </div>
+    {% endfor %}
+
+  </div>
+
+
+</div>
+
+
+{% endblock %}

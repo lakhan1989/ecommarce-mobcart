@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Log-In{% endblock %}
+{% block body %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'layout.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}"> 
+{% endblock %}
+
+ 
+    <form method="post">
+        {% csrf_token %}
+    <div class="login-main-div">
+        <div class="login-div-in">
+            <p class="mobcart-login-para">Login</p>
+        <div>
+            <p class="login-para-p">Username:</p>
+            <input class="login-input" type="text" name="username" required placeholder="Enter your Username">
+        </div>
+        <div>
+            <p class="login-para-p">Password</p>
+            <input class="login-input" type="password" name="password" required placeholder="password">
+        </div>
+         <div class="login-btn-div">
+         <button class="log-in-btn" type="submit"><span class="log-in-text">Log in</span></button> 
+           
+         <a style="text-decoration: none; color:  #3f16e1" href="{% url 'register' %}"><p >Register New User</p></a>
+        </div>
+    </div>
+    </form>
+    </div>
+ 
+ 
+ 
+
+{% endblock %}

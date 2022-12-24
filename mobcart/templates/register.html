@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block body %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'layout.css' %}">
+<link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock %}
+
+<!-- <p>form</p> -->
+
+<div class="login-main-div">
+    <div class="login-div-in">
+        <p class="mobcart-login-para">Register</p>
+        <form method = "POST"> 
+            {% csrf_token %}
+        <div>
+            <p class="login-para-p">Username </p>
+            <input class="login-input" type="text" placeholder="Enter your name" name = "username" >
+        </div>
+        <div>
+            <p class="login-para-p"> Email address </p>
+            <input class="login-input" type="email " required placeholder="Enter your email" name = "email">
+        </div>
+        <div>
+            <p class="login-para-p">Password</p>
+            <input class="login-input" type="password " required placeholder="password" name = "password">
+        </div>
+        <div class="login-btn-div">
+            <button class="log-in-btn"><span class="log-in-text">Register</span></button>
+        </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

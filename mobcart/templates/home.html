@@ -1,0 +1,240 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block body %}
+ 
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    {% endblock %}
+    
+ 
+    <div class="benner-img">
+        <img class="benner-img-absolute" src="{% static 'photos/banner-26.jpg' %} " alt="" />
+        <div class="content">
+            <p class="home-para">WINTER 2022 COLLECTION</p>
+          <p class="banner-hh">Valentin Paul <br>Essential Collation</p>
+          <p class="benner-p">
+            Quis ipsum suspendisse ultricess grevida.Risus...
+          </p>
+          <a class="home-shopcollection" href="">Shop Collection  <span class="material-symbols-outlined">
+            arrow_forward
+            </span></a>
+        </div>
+        <div class="main-wrapper">
+          
+        <div class="featured-products">
+            <h1>Featured Products</h1>
+            <p class="lorem-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, distinctio aliquid. Tempora quia libero id nihil vero doloremque itaque deleniti.</p>
+        </div>
+
+        <div class="recent-view-grid-main">
+               <div class="recent-view-grid-main2">
+                 <div>
+                    <img class="recent-product-img" src="{% static '/photos/fourth-div-img2.jpg' %}" alt="">
+                    <div class="img-div">
+                        <span class="material-symbols-outlined rating p"> star </span>
+                        <p class="p-bold">1 review</p>
+                      </div>
+                      <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                      <p><span class="strike"> $69.48 </span> $47.58 </p>
+                 </div>
+                 <div>
+                    <img class="recent-product-img" src="{% static '/photos/shirt3.jpg' %}" alt="">
+                    <div class="img-div">
+                        <span class="material-symbols-outlined rating p"> star </span>
+                        <p class="p-bold">1 review</p>
+                      </div>
+                      <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                      <p> <span class="strike">$69.48 </span> $47.58 </p>
+                 </div>
+                 <div>
+                    <img class="recent-product-img" src="{% static '/photos/sec-div-shirt5.jpg' %}" alt="">
+                    <div class="img-div">
+                        <span class="material-symbols-outlined rating p"> star </span>
+                        <p class="p-bold">1 review</p>
+                      </div>
+                      <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                      <p> <span class="strike">$69.48 </span>$47.58 </p>
+                 </div>
+                 <div>
+                    <img class="recent-product-img" src="{% static '' %}./photos/sec-div-shirt3.jpeg" alt="">
+                    <div class="img-div">
+                        <span class="material-symbols-outlined rating p"> star </span>
+                        <p class="p-bold">1 review</p>
+                      </div>
+                      <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                      <p><span class="strike"> $69.48 </span> $47.58 </p>
+                 </div>
+                 </div>
+                 </div>
+                 <hr>
+                 <div class="home-main-grid-div1">
+                  
+                    <div>
+                       <img class="grid-div1-img" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                      <div class="home-heading-para"> 
+                        <p class="home-para1">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                       <h5 >Petra van der Meer</h5>
+                      </div>
+                    </div>
+                    <div class="grid-div2-img" >
+                          <div>
+                        <h5>NEW COLLECTIONS</h5>
+                        <h1>Best Sweatshirts and tracksuits for everyone!</h1>
+                        <p class="home-para1">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <button class="home-shop-now-btn"><span class="sp-now"> Shop Now</span>
+                          <span class="material-symbols-outlined">  arrow_forward</span>  </button>
+                      </div>
+                      <img class="grid-div2-img" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                    </div>
+                  </div>
+                  <!-- <p>home-main-grid-section2</p> -->
+                  <div class="home-main-grid-div1">
+                  
+                    <div>
+                       <img class="grid-div1-img" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                      <div class="home-heading-para"> 
+                      </div>
+                    </div>
+                    <div class="grid-div2-img" >
+                          <div>
+                        <h5>NEW COLLECTIONS</h5>
+                        <h1>Best Sweatshirts and tracksuits for everyone!</h1>
+                        <p class="home-para1">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <button class="home-shop-now-btn"><span class="sp-now"> Shop Now</span>
+                          <span class="material-symbols-outlined budhi">  arrow_forward</span>  </button>
+                      </div>
+                      <hr class="home-page-hr">
+                      <div class="home-star-icon">
+                        <span class="material-symbols-outlined rating">
+                          star
+                          </span>
+                        <span class="material-symbols-outlined rating">
+                          star
+                          </span>
+                        <span class="material-symbols-outlined rating">
+                          star
+                          </span>
+                        <span class="material-symbols-outlined rating">
+                          star
+                          </span>
+                        <span class="material-symbols-outlined rating">
+                          star
+                          </span>
+                          <div>
+                          <p class="rat">4.5 (10.000+) Rating</p>
+                        </div>
+                        
+                      </div>
+                      <p class="home-para1">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                      <h5>Petra van der Meer</h5>
+                    </div>
+                  </div>
+                      <hr class="home-hr">
+                  <div class="featured-products featured-products2 ">
+                    <h1>Featured Products</h1>
+                    <p class="lorem-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, distinctio aliquid. Tempora quia libero id nihil vero doloremque itaque deleniti.</p>
+                </div>
+                <!-- <p>last-grid2</p> -->
+                  
+                <div class="recent-view-grid-main">
+                  <div class="recent-view-grid-main2  recent-recent">
+                    <div>
+                       <img class="recent-product-img" src="{% static '/photos/third-div-img1.jpeg' %}" alt="">
+                       <div class="img-div">
+                           <span class="material-symbols-outlined rating p"> star </span>
+                           <p class="p-bold">1 review</p>
+                         </div>
+                         <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                         <p><span class="strike"> $69.48 </span> $47.58 </p>
+                    </div>
+                    <div>
+                       <img class="recent-product-img" src="{% static '/photos/third-div-img1.jpeg' %}" alt="">
+                       <div class="img-div">
+                           <span class="material-symbols-outlined rating p"> star </span>
+                           <p class="p-bold">1 review</p>
+                         </div>
+                         <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                         <p> <span class="strike">$69.48 </span> $47.58 </p>
+                    </div>
+                    <div>
+                       <img class="recent-product-img" src="{% static '/photos/third-div-img1.jpeg' %}" alt="">
+                       <div class="img-div">
+                           <span class="material-symbols-outlined rating p"> star </span>
+                           <p class="p-bold">1 review</p>
+                         </div>
+                         <p>Quilted Bomber Jacket With Ribbed Trims</p>
+                         <p> <span class="strike">$69.48 </span>$47.58 </p>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    <!-- <p>home-absulate-img</p> -->
+                    <div class="banner-img">
+                      <img class="benner-img-relative" src="{% static '/photos/banner-26.jpg' %}" alt="" />
+                      <div class="content1">
+                          <h5>NEW COLLECTION</h5>
+                          <h2 class="banner-h">
+                              Best Sweatshirts and <br />
+                              tracksuits for everyone!
+                          </h2>
+                          <p class="banner-p">
+                              Sed do eisumod tempor incididunt ut labore et dolore magna aliqua.
+                              <br />Quis ipsum 
+                              suspendiss ultrices gravida. Risus commodo viverra maecenas
+                              <br /> accumsan
+                              lacus 
+                              vel facilisis.
+                          </p>
+                          <div>
+                          <button class="button22">
+                              Shop Now
+                              <span class="material-symbols-outlined"> east </span>
+                          </button>
+                      </div>
+                      </div>
+                  </div>
+                       <div class="head-and-para">
+                        <h1>Our Latest News</h1>
+                        <p class="home-para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra vel facilisis.</p>
+                       </div>
+                       <div class=" main-last-grid2">
+                          <div>
+                            <img class="home-last-grid-img1" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                            <div class="collection">
+                               <h5>COLLECTION</h5>
+                               <p class="date"> -25Apr2022</p>
+                            </div>
+                            <div>
+                            <p class="the-best-pro">The Best Products That Shape</p>
+                               <p class="home-grid-mini-para">Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque, sem sed convallis ultricies, ante eros</p>
+                              </div>
+                          </div>
+
+                          <div>
+                            <img class="home-last-grid-img1" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                            <div class="collection">
+                               <h5>COLLECTION</h5>
+                               <p class="date"> -25Apr2022</p>
+                            </div>
+                            <p class="the-best-pro">The Best Products That Shape </p>
+                               <p class="home-grid-mini-para">Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque, sem sed convallis ultricies, ante eros</p>
+                               
+                          </div>
+
+                          <div>
+                            <img class="home-last-grid-img1" src="{% static 'photos/third-div-img1.jpeg' %}" alt="">
+                            <div class="collection">
+                               <h5>COLLECTION</h5>
+                               <p class="date"> -25Apr2022</p>
+                            </div>
+                            <p class="the-best-pro">The Best Products That Shape</p>
+                               <p class="home-grid-mini-para">Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque, sem sed convallis ultricies, ante eros</p>
+                               
+                          </div>
+                       </div>   
+                    </div>
+                  </div>
+             
+{% endblock %}

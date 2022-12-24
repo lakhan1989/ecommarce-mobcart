@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Product-Cart{% endblock %}
+{% block body %}
+
+
+    {% block css %}   
+    <link rel="stylesheet" href="{% static 'product_cart.css' %}" /> 
+    {% endblock %}
+    
+
+
+
+    
+      
+    <div class="cart-main-div">
+      <div class="product-main-div">
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Product</th>
+                    
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+
+              {% for cartsitem in cart_items %}
+
+                <tr>
+                    <td class="first-cell">
+                        <img class="table-img" src="{{ cartsitem.product.image.url }}" alt="" />
+                    </td>
+                    <td class="product-name">{{ cartsitem.product.product_name }}</td>
+                    <td>{{ cartsitem.product.price }}</td>
+                    <td>
+                        <div class="flex-add-remove">
+                            <span class="material-symbols-outlined">
+                                remove
+                            </span>
+                            <p class="quantity-p">{{ cartsitem.quantity }}</p>
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </div>
+                      
+ 
+                    </td>
+                    <td>
+                        $14.99
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div class="apply-coupon">
+          <input class="input-type" type="" placeholder="Coupon code" />
+          <button class="apply-button">Apply Coupon</button>
+          <div class="update-cart">
+            <button class="update-button">Update Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1fr -->
+
+      <div class="cart-toatl-div">
+        <div class="budhi">
+          <p>Cart totals</p>
+          <hr class="cart-hr" />
+          <div class="subtotal-div">
+            <p class="subtotal-p">Subtotal</p>
+            <p>$34.89</p>
+          </div>
+          <hr class="cart-hr" />
+          <div class="shoping-div">
+            <p class="subtotal-p">Shipping</p>
+            <div>
+              <label for="rate">Price: </label>
+              <input type="radio" id="rate" name="flat" />
+
+              <p>
+                <label for="local"> Location</label>
+                <input type="radio" id="local" name="flat" />
+              </p>
+
+              <p>Shipping to AL</p>
+              <a class="address-anchor" href="">Change address</a>
+            </div>
+          </div>
+          <hr class="cart-hr" />
+          <div class="total-div">
+            <p class="subtotal-p">Total</p>
+            <p class="final-price">$49.89</p>
+          </div>
+
+          <div>
+        
+              <a href="{% url 'checkout' %}" style="text-decoration:none ;"><button type="submit" class="checkout-button">Proceed To Checkout</button></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+ <div>
+  {{carts}}
+ </div>
+
+{% endblock %}

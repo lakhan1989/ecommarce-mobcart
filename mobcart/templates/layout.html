@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{% block title %}{% endblock %}</title>
+
+  
+  <link rel="stylesheet" href="{% static 'layout.css' %}">
+
+  {% block css %}{% endblock %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="product-list-main-nav">
+    <div class="nav-1">
+      <h1>Mobcart</h1>
+      <div class="nav-anchor">
+        <a class="anchor" href="{% url 'home' %}">HOME</a>
+        
+        <a class="anchor" href="{% url 'product_list' %}">SHOP</a>
+        <a class="anchor" href="{% url 'product_cart' %}">CART</a>
+      </div>
+      <div class="nav-icon" style="display:flex; align-items:center">
+        <a class="anchor" href="#">{{ request.user.email }}</a> 
+        {% if request.user.is_authenticated %}
+          <form method="POST" action="/logout">
+            {% csrf_token %}
+            <input type="hidden" name="logout" />
+            <button class="anchor" type="submit">Log Out</button>
+          </form>
+        {% endif %}
+        <a style="color:black;" href="{% url 'login' %}"><span class="material-symbols-outlined"> person </span></a>
+        <span class="material-symbols-outlined"> favorite </span>
+        <a style="color:black;" href="{% url 'order_history' %}"><span class="material-symbols-outlined"> shopping_bag </span></a>
+      </div>
+    </div>
+  </div>
+
+  {% block body %}
+  {% endblock %}
+
+
+
+
+
+  <div class="main-div-footer">
+
+    <div class="footer-div1">
+      <div class="">
+        <h1 class="footer-div1-heading">Get our emails for info on <br> new items, sales and more.</h1>
+        <p class="footer-para1">We'll email you a voucher worth £10 off your first order over £50.</p>
+      </div>
+      <div class="footer-search-section">
+        <input class="footer-input" type="search" placeholder="Enter your email address">
+        <button class="footer-btn1"><span class="footer-subscribe"> Subscribe </span></button>
+      </div>
+      <p class="footer-para2">By subscribing you agree to our Terms & Conditions and Privacy & Cookies Policy.</p>
+    </div>
+    <!-- <p>footer-second-section</p> -->
+    <div class="footer-last-div">
+      <div class="footer-div1">
+        <h1 class="footer-div1-heading">Need help? <br>
+          (+800) 1234 5678 90</h1>
+        <p class="footer-para1">We are available 8:00am – 7:00pm</p>
+      </div>
+      <div class="footer-search-section2">
+        <img class="app-store-logo" src="photos/app-store.png logo.png" alt="">
+        <img class="app-store-logo" src="photos/google-play.png logo.png" alt="">
+      </div>
+      <p class="footer-para2"><span class="footer-shopping-para"> Shopping App: </span> <span class="para5"> Try our
+          View in Your Room feature, manage registries and save payment info. </span></p>
+    </div>
+
+  </div>
+ 
+  {% block js %}{% endblock %}
+</body>
+
+</html>

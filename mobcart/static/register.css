@@ -1,0 +1,44 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+.login-main-div{
+margin: auto;
+width: 50%;
+margin-top: 60px;
+margin-bottom: 60px; 
+
+}
+.mobcart-login-para{
+font-size: larger;
+font-weight: 500;
+}
+.login-para-p{
+font-size: 13px;
+}
+.login-input{
+outline: none;
+width: 100%;
+padding: 10px;
+border: 1px solid rgb(221, 218, 218);
+}
+.log-in-btn{
+background-color: #ee403d;
+color:  #fff;
+border: none;
+padding: 15px 20px;
+cursor: pointer;
+}
+.log-in-text{
+font-weight: 600;
+}
+.log-in-btn:hover{
+background-color: #f07472;
+}
+.login-btn-div{
+width: 100%;
+margin: auto;
+margin-top: 20px;
+
+
+}

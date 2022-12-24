@@ -1,0 +1,52 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+.thanks-for-submitting{
+    font-size: 25px;
+    font-weight: 600;
+}
+.go-home-btn{
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    background-color:  #ee403d;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.go-home-btn:hover{
+    background-color: #f07472;
+}
+.mail-icon{
+    font-size: 60px;
+    font-weight: 100;
+
+}
+.thanks-main-div{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    /* padding: 80px; */
+    
+}
+.thanks-content{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 2px 2px 10px 1px rgb(201, 201, 201);
+    margin-top: 50px;
+}
+.massage-sent{
+    font-size: small;
+    text-align: center;
+}
+.massage-and-btn-center{
+    width: 30%;
+    margin: auto;
+}
+.mail-icon-para{
+    width: 30%;
+    margin: auto;
+
+}

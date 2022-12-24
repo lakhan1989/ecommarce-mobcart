@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pants-1 {
+    object-fit: contain;
+    width: 550px;
+    height: 500px;
+}
+
+.product_title {
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.flex {
+    display: flex;
+}
+
+.main {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.flex-rating {
+    align-items: center;
+    display: flex;
+
+}
+
+.star-review {
+    font-size: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.mobile-storage-div {
+    margin-bottom: 20px;
+    column-gap: 20px;
+}
+
+.mobile-size {
+    border: 2px solid #8f8f8f;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.mobile-size:hover {
+    background-color: #ee403d;
+    border: 2px solid #ee403d;
+    color: white;
+
+}
+
+.flex-add-remove {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #8f8f8f;
+    width: 20%;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+
+}
+
+.add-to-cart {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-weight: 500;
+    width: 80%;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+
+}
+
+.add-to-cart:hover {
+    background-color: #8f8f8f;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+}
+
+.size-anchor {
+    text-decoration: none;
+    color: black;
+    font-size: 0.875rem;
+}
+
+.product-descreption {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.linethrow {
+    text-decoration: line-through;
+    color: #8f8f8f;
+}
+
+.anchor-list {
+    display: flex;
+    padding: 20px 0px;
+}
+
+.tags-p {
+    color: #8f8f8f;
+    font-size: 0.875rem;
+}
+
+.icon-p {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.Description-main-div {
+    display: flex;
+    font-size: 1.125rem;
+}
+
+.Description-hedding {
+    margin: 20px;
+    font-size: 1.125rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.Description-hedding:hover {
+    color: #8f8f8f;
+}
+
+.Description-p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.budhi {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.tag-anchor {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+    font-size: 0.875rem;
+}
+
+.tag-anchor:hover {
+    color: #ee403d;
+}
+
+.main-div-footer {
+    padding: 40px;
+}
+.rating {
+    color: #ff6900;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+.recent-product-img{
+    width: 210px;
+    height: 420px;
+}
